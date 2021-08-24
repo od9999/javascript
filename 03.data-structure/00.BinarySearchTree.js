@@ -7,8 +7,6 @@ Node.prototype.show = function () {
 	return this.data;
 };
 
-
-
 function BST() {
 	this.root = null;
 }

@@ -13,19 +13,19 @@ const getMaxSubArraySum = arr => {
 		thisSum += arr[i];
 		if (thisSum > maxSum) {
 			maxSum = thisSum;
-            subArrIndex.push(i);
+			subArrIndex.push(i);
 		}
 		if (thisSum < 0) {
 			thisSum = 0;
 		}
 	}
-    subArr = arr.slice(subArrIndex[0], subArrIndex[subArrIndex.length - 1] + 1);
+	subArr = arr.slice(subArrIndex[0], subArrIndex[subArrIndex.length - 1] + 1);
 	return {
-        maxSum,
-        subArr
+		maxSum,
+		subArr
 	};
 };
 
 
 console.log(getMaxSubArraySum([6]));
-console.log(getMaxSubArraySum([-1,  5 , -3,  7,  -4]));
+console.log(getMaxSubArraySum([-1, 5, -3, 7, -4]));

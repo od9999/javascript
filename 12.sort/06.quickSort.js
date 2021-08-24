@@ -6,8 +6,8 @@
  * @returns {*}
  */
 function quickSort(arr) {
-    if (!arr.length) {
-        return [];
+    if (arr.length === 1) {
+        return arr;
     }
     const [pivot, ...rest] = arr;
     return [

@@ -11,9 +11,9 @@ function compose(...funcs) {
     return (...args) => rest.reduceRight((composed, f) => f(composed), last(...args));
 }
 
-var compose2 = function() {
+var compose2 = function () {
     var funcArr = [].slice.call(arguments);
-    return function(arr) {
+    return function (arr) {
         var tempResult = funcArr[0](arr);
         for (var i = 1; i < funcArr.length; i++) {
             tempResult = funcArr[i](tempResult);
@@ -21,6 +21,18 @@ var compose2 = function() {
         return tempResult;
     };
 };
+
+function compose3(...funcs) {
+    if (funcs.length === 0) {
+        return arg => arg;
+    }
+
+    if (funcs.length === 1) {
+        return funcs[0];
+    }
+
+    return funcs.reduceRight((a, b) => (...args) => a(b(...args)))
+}
 
 function add(x) {
     return x + 1;
@@ -30,6 +42,7 @@ function multi(x) {
     return x * 2;
 }
 console.log(compose(add, multi)(5));
+console.log(compose3(add, multi)(5));
 
 const func = compose();
 

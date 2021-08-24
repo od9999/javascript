@@ -34,5 +34,7 @@ const mergeSort = arr => {
    const middle = Math.floor(len / 2);
    const left = arr.slice(0, middle);
    const right = arr.slice(middle);
-   return merge(mergeSort(left), mergeSort(right));
+   return _merge(mergeSort(left), mergeSort(right));
 }
+
+console.log(mergeSort([5,1,8,9,4]));

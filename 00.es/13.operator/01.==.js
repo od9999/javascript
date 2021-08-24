@@ -1,4 +1,6 @@
 /**
+ * https://262.ecma-international.org/5.1/#sec-11.9.3
+ * https://262.ecma-international.org/5.1/#sec-9.1
  * ==运算符
  * 1. null == undefined  // true
  * 2. null 和 undefined不会转成其他值

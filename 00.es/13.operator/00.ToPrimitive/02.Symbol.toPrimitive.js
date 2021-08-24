@@ -19,4 +19,4 @@ let obj = {
 };
 
 console.log(Number(obj));
-// console.log(String(obj));
+console.log(String(obj));

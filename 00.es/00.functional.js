@@ -38,8 +38,3 @@ const add1OfTimes2 = compose(add1, times2);
 console.log(add1OfTimes2(5)); // 11
 
 
-
-// 作者：范洪春
-// 链接：https://zhuanlan.zhihu.com/p/20824527
-//     来源：知乎
-// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

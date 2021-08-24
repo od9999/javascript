@@ -3,7 +3,7 @@
  */
 const findAppearOne = arr => {
 	let result = arr[0];
-	for(let i = 1; i < arr.length; i++) {
+	for (let i = 1; i < arr.length; i++) {
 		result ^= arr[i];
 	}
 	return result;
@@ -21,8 +21,8 @@ const findAppearOne2 = arr => {
 
 	let binarySumArr = binarySumStr.split('');
 	let index;
-	for(let i = binarySumArr.length - 1; i >= 0 ; i--) {
-		if(binarySumArr[i] === '1') {
+	for (let i = binarySumArr.length - 1; i >= 0; i--) {
+		if (binarySumArr[i] === '1') {
 			index = i;
 			break;
 		}
@@ -30,10 +30,10 @@ const findAppearOne2 = arr => {
 
 	let leftArr = [];
 	let rightArr = [];
-	for(let i = 0; i < arr.length; i++) {
+	for (let i = 0; i < arr.length; i++) {
 		let binaryStr = arr[i].toString(2);
 
-		if(binaryStr.charAt(binaryStr.length - index - 1) === '1') {
+		if (binaryStr.charAt(binaryStr.length - index - 1) === '1') {
 			leftArr.push(arr[i]);
 		} else {
 			rightArr.push(arr[i]);

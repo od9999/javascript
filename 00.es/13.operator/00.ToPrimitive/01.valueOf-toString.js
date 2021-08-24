@@ -8,7 +8,7 @@ let obj1 = {
         return {};
     }
 };
-// console.log(Number(obj1));
+console.log(Number(obj1));
 
 
 console.log('-----');

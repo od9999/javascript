@@ -13,7 +13,6 @@ console.log(arrow.__proto__ === Function.prototype);	// true
 console.log(arrow instanceof Function);					// true
 console.log(Object.prototype.toString.call(arrow));	// [object Function]
 
-
 let obj = {
     getThis: function () {
         return this;

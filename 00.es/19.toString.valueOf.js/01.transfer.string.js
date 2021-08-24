@@ -16,6 +16,7 @@ const obj = {
     }
 };
 console.log(obj + '1');
+console.log(obj + 1);
 
 const obj2 = {
     toString() {
