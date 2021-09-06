@@ -9,7 +9,7 @@ const getMaxSubArraySum = arr => {
 	let subArrIndex = [];
 	let subArr = [];
 
-	for (let i = 0, length = arr.length; i < length; i++) {
+	for (let i = 0; i < arr.length; i++) {
 		thisSum += arr[i];
 		if (thisSum > maxSum) {
 			maxSum = thisSum;
