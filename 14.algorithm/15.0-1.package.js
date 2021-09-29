@@ -27,44 +27,44 @@ const weightList = [4, 6, 2, 2, 5, 1];
 const valueList = [8, 10, 6, 3, 7, 2];
 const packageCapacity = 12;
 const getPackageMaxValue = (weightList, valueList, packageCapacity) => {
-    const table = [];
-    for (let i = 0; i <= weightList.length; i++) {
-        table.push((new Array(packageCapacity)).fill(0));
+  const table = [];
+  for (let i = 0; i <= weightList.length; i++) {
+    table.push((new Array(packageCapacity)).fill(0));
+  }
+  console.log(table);
+  for (let i = 1; i <= weightList.length; i++) {
+    for (let j = 1; j <= packageCapacity; j++) {
+      if (j < weightList[i - 1]) { // 包容量为j，第i个物品放不下
+        table[i][j] = table[i - 1][j];
+      } else { // 能装
+        table[i][j] = Math.max(
+          table[i - 1][j],
+          table[i - 1][j - weightList[i - 1]] + valueList[i - 1]
+        );
+      }
     }
-    console.log(table);
-    for (let i = 1; i <= weightList.length; i++) {
-        for (let j = 1; j <= packageCapacity; j++) {
-            if (j < weightList[i - 1]) { // 包容量为j，第i个物品放不下
-                table[i][j] = table[i - 1][j];
-            } else { // 能装
-                table[i][j] = Math.max(
-                    table[i - 1][j],
-                    table[i - 1][j - weightList[i - 1]] + valueList[i - 1]
-                );
-            }
-        }
+  }
+  console.log(table);
+  const selectedIndexArr = (new Array(table.length - 1)).fill(false);
+  const recur = (i, j) => {
+    if (i > 0) {
+      // 相等说明没装
+      if (table[i][j] === table[i - 1][j]) {
+        recur(i - 1, j);
+      } else if (
+        j - weightList[i - 1] >= 0
+        && table[i][j] == table[i - 1][j - weightList[i - 1]] + valueList[i - 1]
+      ) {
+        selectedIndexArr[i - 1] = true;
+        recur(i - 1, j - weightList[i - 1]);
+      }
     }
-    console.log(table);
-    const selectedIndexArr = (new Array(table.length - 1)).fill(false);
-    const recur = (i, j) => {
-        if (i > 0) {
-            // 相等说明没装
-            if (table[i][j] === table[i - 1][j]) {
-                recur(i - 1, j);
-            } else if (
-                j - weightList[i - 1] >= 0
-                && table[i][j] == table[i - 1][j - weightList[i - 1]] + valueList[i - 1]
-            ) {
-                selectedIndexArr[i - 1] = true;
-                recur(i - 1, j - weightList[i - 1]);
-            }
-        }
-    };
-    recur(weightList.length, packageCapacity);
-    return {
-        selectedIndexArr,
-        maxValue: table[weightList.length][packageCapacity]
-    };
+  };
+  recur(weightList.length, packageCapacity);
+  return {
+    selectedIndexArr,
+    maxValue: table[weightList.length][packageCapacity]
+  };
 
 };
 

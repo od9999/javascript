@@ -9,11 +9,11 @@
 const findHalfAppearance = (arr) => {
 	let result = arr[0];
 	let times = 1;
-	for(let i = 1; i < arr.length; i++) {
-		if(times === 0) {
+	for (let i = 1; i < arr.length; i++) {
+		if (times === 0) {
 			result = arr[i];
 			times = 1;
-		} else if(result === arr[i]) {
+		} else if (result === arr[i]) {
 			times++;
 		} else {
 			times--;
@@ -23,4 +23,4 @@ const findHalfAppearance = (arr) => {
 	return result;
 };
 
-console.log(findHalfAppearance([1,2,3,4,41,1,1,5,6,1,1,1]));
+console.log(findHalfAppearance([1, 2, 3, 4, 41, 1, 1, 5, 6, 1, 1, 1]));

@@ -78,7 +78,7 @@ BST.prototype.depth = function () {
 	return this._depth(this.root);
 };
 BST.prototype._depth = function (node) {
-	if(null === node) {
+	if (null === node) {
 		return 0;
 	} else {
 		let leftDepth = this._depth(node.left);
