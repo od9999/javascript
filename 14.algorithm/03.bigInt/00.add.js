@@ -1,4 +1,4 @@
-function bigNumAdd(a, b) {
+function add(a, b) {
   let aStr = String(a);
   let bStr = String(b);
 
@@ -29,4 +29,4 @@ function bigNumAdd(a, b) {
   return result.join('');
 }
 
-console.log(bigNumAdd(123, 2456));
+console.log(add(123, 2456));

@@ -12,12 +12,12 @@
 //     };
 // };
 
-Function.prototype.bind = function() {
-    var args = Array.prototype.slice.call(arguments, 1);
-    var context = arguments[0];
-    var self = this;
-    return function f() {
-        var innerArgs = Array.prototype.slice.call(arguments);
+Function.prototype.bind = function(context, ...args) {
+    // var args = Array.prototype.slice.call(arguments, 1);
+    // var context = arguments[0];
+    const self = this;
+    return function f(...innerArgs) {
+        // var innerArgs = Array.prototype.slice.call(arguments);
         return self.apply(context, args.concat(innerArgs));
     };
 };

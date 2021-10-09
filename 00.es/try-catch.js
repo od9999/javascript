@@ -8,7 +8,8 @@ function test1(){
     return 4;
   } finally {
     console.log(5);
-    return 6;
+    // return 6;
+    return undefined;
   }
 }
 
@@ -29,6 +30,6 @@ function test2(){
     return 6;
   }
 }
-console.log(test2());
+// console.log(test2());
 //1 3 5
 //Uncaught Error: finally-Error
