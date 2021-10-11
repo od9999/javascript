@@ -1,5 +1,5 @@
 const isEven = (num) => {
-    return (num & 1) === 0;
+  return (num & 1) === 0;
 };
 
 

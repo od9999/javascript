@@ -1,7 +1,7 @@
 /**
  * 两个有序数组，合并成一个有序数组
  */
-function merge (arr1, arr2) {
+function merge(arr1, arr2) {
 	let result = [];
 	let index1 = 0;
 	let index2 = 0;
