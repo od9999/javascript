@@ -9,7 +9,9 @@ var isBalanced = function (root) {
 };
 
 function depth(node) {
-  if (!node) return 0;
+  if (!node) {
+    return 0;
+  }
   var left = depth(node.left);
   var right = depth(node.right);
   return Math.max(left, right) + 1;
