@@ -22,7 +22,7 @@ const copy2 = (source) => {
   }
   let dest = Array.isArray(source) ? [] : {};
   const queue = [{ source, dest }];
-
+  // 解决循环引用，导致调用栈溢出问题
   const map = new WeakMap();
 
   while (queue.length) {

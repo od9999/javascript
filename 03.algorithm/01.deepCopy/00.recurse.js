@@ -11,7 +11,7 @@ const getType = v => {
 };
 
 const copy = (source) => {
-  // 解决循环引用问题
+  // 解决循环引用，导致调用栈溢出问题
   const map = new WeakMap();
 
   const _cp = (source) => {
