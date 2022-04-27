@@ -13,3 +13,10 @@ function getGroup(data, index = 0, group = []) {
 }
  
 console.log(getGroup(data));
+// [
+//   'a',   'b',   'ab',
+//   'c',   'ac',  'bc',
+//   'abc', 'd',   'ad',
+//   'bd',  'abd', 'cd',
+//   'acd', 'bcd', 'abcd'
+// ]

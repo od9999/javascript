@@ -1,3 +1,11 @@
+// http://www.conardli.top/docs/dataStructure/%E5%A0%86/%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0.html
+// 思路1：
+// 1.把前k个数构建一个大顶堆
+// 2.从第k个数开始，和大顶堆的最大值进行比较，若比最大值小，交换两个数的位置，重新构建大顶堆
+// 3.一次遍历之后大顶堆里的数就是整个数据里最小的k个数。
+// 时间复杂度nlogk，优于思路1。
+
+// 思路2：
 // ac地址：https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/
 // 原文地址：https://xxoo521.com/2020-02-21-least-nums/
 

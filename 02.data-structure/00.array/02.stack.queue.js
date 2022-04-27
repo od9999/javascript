@@ -42,4 +42,4 @@ function pop() {
   } else {
     return queue2.shift();
   }
-};
+}

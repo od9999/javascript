@@ -21,4 +21,4 @@ function getMaxCountNum(arr) {
   return candidate;
 }
 
-console.log(getMaxCountNum([1, 5, 7, -4, 1, 1, 1]));
+console.log(getMaxCountNum([1, 5, 7, -4, 1, 1, 1])); // 1

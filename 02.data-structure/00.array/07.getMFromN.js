@@ -22,7 +22,7 @@ function getMFromN(arr, array, n, sum) {
 // 给定无序、不重复的数组data，取出 n 个数，使其相加和为sum
 // #思路
 // 基于上面字符串排列题目的变形，我们从array中取出n个数的全排列，在取的同时判断是否符合条件。
-function getAllCombin(array, n, sum, temp = []) {
+function getAllCombine(array, n, sum, temp = []) {
   if (temp.length === n) {
     if (temp.reduce((t, c) => t + c) === sum) {
       return temp;
@@ -32,7 +32,7 @@ function getAllCombin(array, n, sum, temp = []) {
   for (let i = 0; i < array.length; i++) {
     const current = array.shift();
     temp.push(current);
-    const result = getAllCombin(array, n, sum, temp);
+    const result = getAllCombine(array, n, sum, temp);
     if (result) {
       return result;
     }
@@ -41,6 +41,5 @@ function getAllCombin(array, n, sum, temp = []) {
   }
 }
 const arr = [4, 5, 6, 3, 2, 1];
-
-console.log(getAllCombin(arr, 3, 10));
+console.log(getAllCombine(arr, 3, 10)); // [ 4, 5, 1 ]
 

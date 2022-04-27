@@ -27,5 +27,6 @@ const getMaxSubArraySum = arr => {
 };
 
 
-console.log(getMaxSubArraySum([6]));
-console.log(getMaxSubArraySum([-1, 5, -3, 7, -4]));
+console.log(getMaxSubArraySum([6]));  // { maxSum: 6, subArr: [ 6 ] }
+console.log(getMaxSubArraySum([-1, 5, -3, 7, -4])); // { maxSum: 9, subArr: [ 5, -3, 7 ] }
+
