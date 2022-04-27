@@ -20,14 +20,10 @@ function set(obj, path, value) {
       }
       src = src[key];
     }
-  })
+  });
 }
-
-let user = { };​
-// set(user, "images[0].url", "xxxx");​
-console.log(user);
-// set(user, "images[0].width", 300);​
-// 调用后user的内容为​
-// {​
-//    images: [{url: "xxx", width: 300}]​
-// }
+const a = {};
+set(a, "images[0].url", "xxxx");
+console.log(a); // { images: [ { url: 'xxxx' } ] }
+set(a, "images[0].width", 300);
+console.log(a); // { images: [ { url: 'xxxx', width: 300 } ] }

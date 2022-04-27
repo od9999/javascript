@@ -1,4 +1,6 @@
-// 迭代法
+// 反转链表
+
+// 方法1：迭代法
 function reverseList(head) {
   if (!head || !head.next) {
     return head;
@@ -19,7 +21,7 @@ function reverseList(head) {
   return head;
 }
 
-// 递归法
+// 方法2：递归法
 function reverseList(head) {
   if (!head || !head.next) {
     return head;

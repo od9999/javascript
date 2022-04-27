@@ -1,4 +1,5 @@
-// 删除链表的倒数第 N 个结点  https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/qian-duan-shi-tang-ti-jie-chao-hao-li-ji-qv20/
+// 删除链表的倒数第 N 个结点
+// https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/qian-duan-shi-tang-ti-jie-chao-hao-li-ji-qv20/
 // 快慢指针
 // 先明确，删除倒数第 n 个结点，我们需要找到倒数第 n+1 个结点，删除其后继结点即可。
 

@@ -1,3 +1,5 @@
+// 逆序打印链表
+
 // 栈 迭代
 function reversePrint(head) {
   const stack = [head];

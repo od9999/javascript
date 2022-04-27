@@ -13,7 +13,7 @@ function get(source, path, defaultValue = undefined) {
   return result;
 }
 // 测试用例
-console.log(get({ a: null }, "a.b.c", 3)); // output: 3
-console.log(get({ a: undefined }, "a", 3)); // output: 3
-console.log(get({ a: null }, "a", 3)); // output: 3
-console.log(get({ a: [{ b: 1 }] }, "a[0].b", 3)); // output: 1
+console.log(get({ a: null }, "a.b.c", 3)); // 3
+console.log(get({ a: undefined }, "a", 3)); // 3
+console.log(get({ a: null }, "a", 3)); // 3
+console.log(get({ a: [{ b: 1 }] }, "a[0].b", 3)); // 1
