@@ -23,5 +23,5 @@ const fenToYuan2 = (fen, fallback = '--') => {
   }
 };
 
-console.log(fenToYuan(12350));
-console.log(fenToYuan(12350));
+console.log(fenToYuan(12350)); // 123.50
+console.log(fenToYuan2(12350)); // 123.50
