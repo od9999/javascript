@@ -12,3 +12,10 @@ const isInstanceOf = (obj, Constructor) => {
 console.log(isInstanceOf(1, Number));
 console.log(isInstanceOf(1, Object));
 console.log(isInstanceOf(1, Date));
+
+function Person(name) {
+    this.name = name;
+}
+const p = new Person('ryan');
+console.log(p.prototype);
+console.log(p.__proto__);

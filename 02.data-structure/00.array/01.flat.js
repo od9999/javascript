@@ -14,11 +14,11 @@ function flat(arr, num = 1) {
 
 // 栈思想
 function flat2(arr) {
-  const result = []; 
+  const result = [];
   const stack = [].concat(arr);  // 将数组元素拷贝至栈，直接赋值会改变原数组
   //如果栈不为空，则循环遍历
   while (stack.length !== 0) {
-    const val = stack.pop(); 
+    const val = stack.pop();
     if (Array.isArray(val)) {
       stack.push(...val); //如果是数组再次入栈，并且展开了一层
     } else {

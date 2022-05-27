@@ -24,6 +24,15 @@ function permutate(list) {
   }
   return result;
 }
+console.log(permutate([1, 2, 3]));
+// [
+//   [ 1, 2, 3 ],
+//   [ 1, 3, 2 ],
+//   [ 2, 1, 3 ],
+//   [ 2, 3, 1 ],
+//   [ 3, 1, 2 ],
+//   [ 3, 2, 1 ]
+// ]
 
 function fullPermutate(arr) {
   const result = [];
@@ -39,17 +48,7 @@ function fullPermutate(arr) {
   return result;
 }
 
-const list = [1, 2, 3];
-console.log(permutate(list));
-console.log(fullPermutate(list));
-// [
-//   [ 1, 2, 3 ],
-//   [ 1, 3, 2 ],
-//   [ 2, 1, 3 ],
-//   [ 2, 3, 1 ],
-//   [ 3, 1, 2 ],
-//   [ 3, 2, 1 ]
-// ]
+console.log(fullPermutate([1, 2, 3]));
 // [
 //   [ 1 ],       [ 2 ],
 //   [ 3 ],       [ 1, 2 ],
